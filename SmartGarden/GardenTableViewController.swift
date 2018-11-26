@@ -106,7 +106,7 @@ class GardenTableViewController: UITableViewController {
         
         do{
             //let postData = try JSONSerialization.data(withJSONObject: parameters, options: [])
-            let request = NSMutableURLRequest(url: NSURL(string: "http://ec2-18-218-39-84.us-east-2.compute.amazonaws.com/api/gardens")! as URL,
+            let request = NSMutableURLRequest(url: NSURL(string: apiUrl + "gardens")! as URL,
                                               cachePolicy: .useProtocolCachePolicy,
                                               timeoutInterval: 10.0)
             //set the request to a get request

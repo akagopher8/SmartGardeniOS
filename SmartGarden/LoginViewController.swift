@@ -8,6 +8,8 @@
 
 import UIKit
 
+let apiUrl = "https://resilientsmartgarden.com/api/"
+
 class LoginViewController: UIViewController {
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -94,7 +96,7 @@ class LoginViewController: UIViewController {
         do{
             //Set up for the server request
             let postData = try JSONSerialization.data(withJSONObject: parameters, options: [])
-            let request = NSMutableURLRequest(url: NSURL(string: "http://ec2-18-218-39-84.us-east-2.compute.amazonaws.com/api/authenticate")! as URL,
+            let request = NSMutableURLRequest(url: NSURL(string: apiUrl + "authenticate")! as URL,
                                               cachePolicy: .useProtocolCachePolicy,
                                               timeoutInterval: 10.0)
             //set the request type to a post request
